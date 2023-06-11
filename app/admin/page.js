@@ -1,7 +1,8 @@
 import { connectDB } from "@/util/database";
 import React from "react";
 import Image from "next/image";
-import ProductList from "./../components/ProductList";
+
+import ProductList from "./../../components/ProductList";
 import { Gowun_Batang } from "next/font/google";
 import BannerCarousel from "@/components/BannerCarousel";
 const pretendard = Gowun_Batang({
@@ -24,6 +25,7 @@ export default async function Home() {
   
   return (
     <div>
+      
       <div className={pretendard.className}>
       <main className="banner" >
         <div className="메인아이템">

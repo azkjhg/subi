@@ -1,27 +1,156 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  color: black;
+}
+hr {
+  border-color: black;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  border-radius: 10px;
+  background-image: url("/배경.jpg");
+  overflow: hidden;
+  /* background-position: top center ; */
+}
+
+.메인아이템 {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+}
+.banner-info {
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 1rem;
+
+  width: 660px;
+
+  font-weight: bold;
+
+  color: black;
+  font-size: 48px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (max-width: 700px) {
+  .banner-info {
+    font-size: 28px;
+    width: 80vw;
+  }
+  .banner {
+    height: 50vh;
+    background-position: 35% 10%;
+    display: none;
+  }
+  .banner-info-text {
+    font-size: 20px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.가게정보 {
+  width: 350px;
+  height: 500px;
+  padding: 1rem;
+
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
+
+@media (max-width: 1100px) {
+  .가게정보 {
+    display: none;
+  }
+}
+
+/*  */
+.서브배너 {
+  width: 100vw;
+
+  background-position: 35% 10%;
+  background-image: url("/배경.jpg");
+
+}
+.커버아이템{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.banner-info2 {
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 1rem;
+  font-size: 28px;
+  width: 440px;
+  font-weight: bold;
+  color: black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: auto;
+
+
+}
+.banner-info-text {
+  font-size: 20px;
+}
+@media (min-width: 700px) {
+  .서브배너{
+    display: none;
+  }
+}
+/*  */
+
+
+/*  */
+/* #wrap {
+  min-width: 1100px;
+  overflow: hidden;
+  outline: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
+    helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+body,
+input,
+textarea,
+select,
+button,
+table {
+  font-family: "돋움", Dotum, Helvetica, sans-serif;
+  font-size: 12px;
+  -webkit-text-size-adjust: none;
+} */
+
+/*  */
+.parent-image{
+  max-width: 72rem;/* 틀의 가로 크기 */
+  height: 70vh;/* 틀의 세로 크기 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.child-image {
+  max-width: 100%; /* 사진의 최대 너비는 부모 요소에 맞춤 */
+  max-height: 100%; /* 사진의 최대 높이는 부모 요소에 맞춤 */
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+/*  */
