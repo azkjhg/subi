@@ -66,7 +66,7 @@ export default function ListItem({ result }) {
           뱃지 = (
             <span
               class="absolute left-2 top-[176px] 
-              bg-blue-100 text-blue-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300"
+              bg-blue-100 text-blue-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded"
             >
               {item.매물종류}
             </span>
@@ -76,7 +76,7 @@ export default function ListItem({ result }) {
           뱃지 = (
             <span
               class="absolute left-2 top-[176px] 
-              bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 "
+              bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  "
             >
               {item.매물종류}
             </span>
@@ -84,35 +84,35 @@ export default function ListItem({ result }) {
         }
         if (item.매물종류 == "상가주택") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+            <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "상가점포") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">
+            <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "빌라") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
+            <span class="absolute left-2 top-[176px] bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "단독") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-purple-100 text-purple-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">
+            <span class="absolute left-2 top-[176px] bg-purple-100 text-purple-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "토지") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-green-100 text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+            <span class="absolute left-2 top-[176px] bg-green-100 text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
               {item.매물종류}
             </span>
           );
@@ -120,28 +120,28 @@ export default function ListItem({ result }) {
 
         if (item.거래유형 == "매매") {
           뱃지2 = (
-            <span class=" bg-gray-100 text-gray-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-400 border border-gray-500">
+            <span class=" bg-gray-100 text-gray-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-gray-500">
               {item.거래유형}
             </span>
           );
         }
         if (item.거래유형 == "년세") {
           뱃지2 = (
-            <span class=" bg-yellow-100 text-yellow-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-yellow-300 border border-yellow-300">
+            <span class=" bg-yellow-100 text-yellow-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-yellow-300">
               {item.거래유형}
             </span>
           );
         }
         if (item.거래유형 == "월세") {
           뱃지2 = (
-            <span class=" bg-pink-100 text-pink-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-pink-400 border border-pink-400">
+            <span class=" bg-pink-100 text-pink-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-pink-400">
               {item.거래유형}
             </span>
           );
         }
         if (item.거래유형 == "전세") {
           뱃지2 = (
-            <span class=" bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-indigo-400 border border-indigo-400">
+            <span class=" bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-indigo-400">
               {item.거래유형}
             </span>
           );

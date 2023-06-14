@@ -13,6 +13,7 @@ import { v4 } from "uuid";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import MultiCarousel from "@/components/MultiCarousel";
+import formType from "@/service/formTypes";
 
 const EditComponent = ({ result }) => {
   console.log(result, "에딧_리절트");
@@ -426,6 +427,11 @@ const EditComponent = ({ result }) => {
   };
   const 기본정보 = (
     <>
+      <input
+        style={{ display: "none" }}
+        name="_id"
+        defaultValue={result._id.toString()}
+      />
       <h1>기본정보</h1>
       <br />
       <span>제목 : </span>
@@ -597,6 +603,350 @@ const EditComponent = ({ result }) => {
       )}
     </>
   );
+
+  const 양식들 = () => {
+    const 공급면적 = (
+      <>
+        <span>공급면적 : </span>
+        <input
+          name="공급면적"
+          placeholder="공급면적"
+          defaultValue={result.공급면적}
+        />
+        ㎡
+        <br />
+      </>
+    );
+    const 전용면적 = (
+      <>
+        <span>전용면적 : </span>
+        <input
+          name="전용면적"
+          placeholder="전용면적"
+          defaultValue={result.전용면적}
+        />
+        ㎡
+        <br />
+      </>
+    );
+    const 해당동 = (
+      <>
+        <span>해당동 : </span>
+        <input
+          name="해당동"
+          placeholder="해당동"
+          defaultValue={result.해당동}
+        />
+        <br />
+      </>
+    );
+    const 입주가능일 = (
+      <>
+        <span>입주가능일 : </span>
+        <input
+          name="입주가능일"
+          placeholder="입주가능일"
+          defaultValue={result.입주가능일}
+        />
+        <br />
+      </>
+    );
+    const 방향 = (
+      <>
+        <span>방향 : </span>
+        <input name="방향" placeholder="방향" />
+        <br />
+      </>
+    );
+    const 현관구조 = (
+      <>
+        <span>방향 : </span>
+        <input name="방향" placeholder="방향" defaultValue={result.방향} />
+        <br />
+      </>
+    );
+    const 해당층 = (
+      <>
+        <span>해당층 : </span>
+        <input
+          name="해당층"
+          placeholder="해당층/총층"
+          defaultValue={result.해당층}
+        />
+        <br />
+      </>
+    );
+    const 방 = (
+      <>
+        <span>방/욕실수 : </span>
+        <input name="방" placeholder="방/욕실수" defaultValue={result.방} />
+        <br />
+      </>
+    );
+    const 월관리비 = (
+      <>
+        <span>월관리비 : </span>
+        <input
+          name="월관리비"
+          placeholder="월관리비"
+          defaultValue={result.월관리비}
+        />
+        만원
+        <br />
+      </>
+    );
+    const 건축물용도 = (
+      <>
+        <span>건축물용도 : </span>
+        <input
+          name="건축물용도"
+          placeholder="건축물용도"
+          defaultValue={result.건축물용도}
+        />
+        <br />
+      </>
+    );
+    const 총세대수 = (
+      <>
+        <span>총세대수 : </span>
+        <input
+          name="총세대수"
+          placeholder="총세대수"
+          defaultValue={result.총세대수}
+        />
+        <br />
+      </>
+    );
+    const 사용승인일 = (
+      <>
+        <span>사용승인일 : </span>
+        <input
+          name="사용승인일"
+          placeholder="사용승인일"
+          defaultValue={result.사용승인일}
+        />
+        <br />
+      </>
+    );
+    const 주차가능여부 = (
+      <>
+        <span>주차가능여부 : </span>
+        <input
+          name="주차가능여부"
+          placeholder="주차가능여부"
+          defaultValue={result.주차가능여부}
+        />
+        <br />
+      </>
+    );
+    const 총주차대수 = (
+      <>
+        <span>총주차대수 : </span>
+        <input
+          name="총주차대수"
+          placeholder="총주차대수"
+          defaultValue={result.총주차대수}
+        />
+        <br />
+      </>
+    );
+    const 난방방식 = (
+      <>
+        <span>난방방식 : </span>
+        <input
+          name="난방방식"
+          placeholder="난방방식"
+          defaultValue={result.난방방식}
+        />
+        <br />
+      </>
+    );
+    const 내용 = (
+      <>
+        <hr />
+        <textarea
+          name="content"
+          placeholder="내용"
+          rows="10"
+          cols="60"
+          defaultValue={result.content}
+        />
+        <br />
+      </>
+    );
+    const 연면적 = (
+      <>
+        <span>연면적 : </span>
+        <input
+          name="연면적"
+          placeholder="연면적"
+          defaultValue={result.연면적}
+        />
+        ㎡
+        <br />
+      </>
+    );
+    const 대지면적 = (
+      <>
+        <span>대지면적 : </span>
+        <input
+          name="대지면적"
+          placeholder="대지면적"
+          defaultValue={result.대지면적}
+        />
+        ㎡
+        <br />
+      </>
+    );
+    const 지하층 = (
+      <>
+        <span>지하층/지상층 : </span>
+        <input
+          name="지하층"
+          placeholder="지하층/지상층"
+          defaultValue={result.지하층}
+        />
+        <br />
+      </>
+    );
+    const 현업종 = (
+      <>
+        <span>현업종 : </span>
+        <input
+          name="현업종"
+          placeholder="현업종"
+          defaultValue={result.현업종}
+        />
+        <br />
+      </>
+    );
+    const 추천업종 = (
+      <>
+        <span>추천업종 : </span>
+        <input
+          name="추천업종"
+          placeholder="추천업종"
+          defaultValue={result.추천업종}
+        />
+        <br />
+      </>
+    );
+    const 총점포수 = (
+      <>
+        <span>총점포수 : </span>
+        <input
+          name="총점포수"
+          placeholder="총점포수"
+          defaultValue={result.총점포수}
+        />
+        <br />
+      </>
+    );
+    const 계약면적 = (
+      <>
+        <span>계약면적 : </span>
+        <input
+          name="계약면적"
+          placeholder="계약면적"
+          defaultValue={result.계약면적}
+        />
+        ㎡
+        <br />
+      </>
+    );
+    const 건물종류 = (
+      <>
+        <span>건물종류 : </span>
+        <input
+          name="건물종류"
+          placeholder="건물종류"
+          defaultValue={result.건물종류}
+        />
+        <br />
+      </>
+    );
+    const 건축면적 = (
+      <>
+        <span>건축면적 : </span>
+        <input
+          name="건축면적"
+          placeholder="건축면적"
+          defaultValue={result.건축면적}
+        />
+        ㎡
+        <br />
+      </>
+    );
+    const 지목 = (
+      <>
+        <span>지목 : </span>
+        <input name="지목" placeholder="지목" defaultValue={result.지목} />
+        <br />
+      </>
+    );
+    const 용도지역 = (
+      <>
+        <span>용도지역 : </span>
+        <input
+          name="용도지역"
+          placeholder="용도지역"
+          defaultValue={result.용도지역}
+        />
+        <br />
+      </>
+    );
+
+    if (category === "아파트") {
+      return (
+        <>
+          <input name="매물종류" value="아파트" style={{ display: "none" }} />
+          {formType(category)}
+        </>
+      );
+    } else if (category === "상가건물") {
+      return (
+        <>
+          <input name="매물종류" value="상가건물" style={{ display: "none" }} />
+          {formType(category)}
+        </>
+      );
+    } else if (category === "상가주택") {
+      return (
+        <>
+          <input name="매물종류" value="상가주택" style={{ display: "none" }} />
+          {formType(category)}
+        </>
+      );
+    } else if (category === "상가점포") {
+      return (
+        <>
+          <input name="매물종류" value="상가점포" style={{ display: "none" }} />
+          {formType(category)}
+        </>
+      );
+    } else if (category === "빌라") {
+      return (
+        <>
+          <input name="매물종류" value="빌라" style={{ display: "none" }} />
+          {formType(category)}
+        </>
+      );
+    } else if (category === "단독") {
+      return (
+        <>
+          <input name="매물종류" value="단독" style={{ display: "none" }} />
+          {formType(category)}
+        </>
+      );
+    } else if (category === "토지") {
+      return (
+        <>
+          <input name="매물종류" value="토지" style={{ display: "none" }} />
+          {formType(category)}
+        </>
+      );
+    }
+  };
   return (
     <div className="m-auto max-w-3xl">
       <div>
@@ -666,15 +1016,7 @@ const EditComponent = ({ result }) => {
           <br />
           <form onSubmit={uploadAndSubmitForm}>
             <input name="매물종류" value="아파트" style={{ display: "none" }} />
-
-            <input
-              style={{ display: "none" }}
-              name="_id"
-              defaultValue={result._id.toString()}
-            />
-
             {기본정보}
-
             <br />
             <span>공급면적 : </span>
             <input
@@ -682,6 +1024,7 @@ const EditComponent = ({ result }) => {
               placeholder="공급면적"
               defaultValue={result.공급면적}
             />
+            ㎡
             <br />
             <span>전용면적 : </span>
             <input
@@ -773,7 +1116,6 @@ const EditComponent = ({ result }) => {
               defaultValue={result.난방방식}
             />
             <br />
-
             <hr />
             <textarea
               name="content"
@@ -797,13 +1139,11 @@ const EditComponent = ({ result }) => {
               value="상가건물"
               style={{ display: "none" }}
             />
-
             <input
               style={{ display: "none" }}
               name="_id"
               defaultValue={result._id.toString()}
             />
-
             {기본정보}
             <br />
             <span>연면적 : </span>
@@ -812,6 +1152,7 @@ const EditComponent = ({ result }) => {
               placeholder="연면적"
               defaultValue={result.연면적}
             />
+            ㎡
             <br />
             <span>대지면적 : </span>
             <input
@@ -819,6 +1160,7 @@ const EditComponent = ({ result }) => {
               placeholder="대지면적"
               defaultValue={result.대지면적}
             />
+            ㎡
             <br />
             <span>입주가능일 : </span>
             <input
@@ -879,7 +1221,6 @@ const EditComponent = ({ result }) => {
               defaultValue={result.총주차대수}
             />
             <br />
-
             <br />
             <hr />
             <textarea
@@ -1007,13 +1348,11 @@ const EditComponent = ({ result }) => {
               value="상가점포"
               style={{ display: "none" }}
             />
-
             <input
               style={{ display: "none" }}
               name="_id"
               defaultValue={result._id.toString()}
             />
-
             {기본정보}
             <br />
             <span>계약면적 : </span>
@@ -1022,6 +1361,7 @@ const EditComponent = ({ result }) => {
               placeholder="계약면적"
               defaultValue={result.계약면적}
             />
+            ㎡
             <br />
             <span>전용면적 : </span>
             <input
@@ -1106,7 +1446,6 @@ const EditComponent = ({ result }) => {
               defaultValue={result.총주차대수}
             />
             <br />
-
             <br />
             <hr />
             <textarea
@@ -1254,13 +1593,11 @@ const EditComponent = ({ result }) => {
           <br />
           <form onSubmit={uploadAndSubmitForm}>
             <input name="매물종류" value="단독" style={{ display: "none" }} />
-
             <input
               style={{ display: "none" }}
               name="_id"
               defaultValue={result._id.toString()}
             />
-
             {기본정보}
             <br />
             <span>대지면적 : </span>
@@ -1276,6 +1613,7 @@ const EditComponent = ({ result }) => {
               placeholder="건축면적"
               defaultValue={result.건축면적}
             />
+            ㎡
             <br />
             <span>연면적 : </span>
             <input
@@ -1360,7 +1698,6 @@ const EditComponent = ({ result }) => {
               defaultValue={result.건물보안}
             />
             <br />
-
             <br />
             <hr />
             <textarea
