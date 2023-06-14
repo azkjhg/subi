@@ -10,7 +10,7 @@ export default async function handler(request, response) {
     /// auth 부분
     ////////////////////////////////
     /// db 부분
-    console.log(request.body, " 서버 바디");
+
     const db = (await connectDB).db("subi");
     let preResult = await db
       .collection("post")

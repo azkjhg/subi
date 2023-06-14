@@ -2,9 +2,9 @@ import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
 
 export default async function handler(request, response) {
-  console.log(request.body, "요청 바디");
+
   try {
-    console.log("여기서부터 실행이 안되나?");
+
     const client = await connectDB;
     const db = client.db("subi");
 

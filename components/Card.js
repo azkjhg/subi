@@ -4,7 +4,7 @@ import Link from "next/link";
 const Card = ({result, children}) => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {result.reverse().map((item, i) => {
+          {result.map((item, i) => {
             if(!item.금액2){
               item.금액 = item.금액1
             }
@@ -24,10 +24,10 @@ const Card = ({result, children}) => {
               bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 ">{item.매물종류}</span>
             }
             if(item.매물종류 == '상가주택'){
-              뱃지 = <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{item.매물종류}</span>
+              뱃지 = <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{item.매물종류}</span>
             }
             if(item.매물종류 == '상가점포'){
-              뱃지 = <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{item.매물종류}</span>
+              뱃지 = <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{item.매물종류}</span>
             }
             if(item.매물종류 == '빌라'){
               뱃지 = <span class="absolute left-2 top-[176px] bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{item.매물종류}</span>
