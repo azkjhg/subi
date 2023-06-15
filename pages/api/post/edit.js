@@ -133,6 +133,7 @@ let form = {
                   소재지: request.body.소재지,
                   금액1: request.body.금액1,
                   금액2: request.body.금액2 && request.body.금액2,
+                  유튜브링크: request.body.유튜브링크,
 }
 if(request.body.매물종류 == '아파트'){
   form = { ...form, 
@@ -211,7 +212,8 @@ if(request.body.매물종류 == '토지'){
                   동: request.body.동,
               소재지: request.body.소재지,
               금액1: request.body.금액1,
-              금액2: request.body.금액2 && request.body.금액2,}
+              금액2: request.body.금액2 && request.body.금액2,
+            유튜브링크: request.body.유튜브링크,}
 if(request.body.매물종류 == '아파트'){
   form = {    ...form, 
     ...templates()

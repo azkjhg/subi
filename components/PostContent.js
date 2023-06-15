@@ -1,5 +1,6 @@
 import formType from "@/service/formTypes";
 import React from "react";
+import YouTubeP from "@/components/Youtube";
 
 const PostContent = ({ result }) => {
   const 금액1 = () => {
@@ -133,6 +134,27 @@ const PostContent = ({ result }) => {
       </thead>
     </>
   );
+  const 내용 = (
+    <>
+      {result.유튜브링크 && (
+        
+          <YouTubeP 유튜브링크={result.유튜브링크} />
+
+      )}
+      <div class=" border-t border-gray-100">
+        <dl class="divide-y divide-gray-100">
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
+              내용
+            </dt>
+            <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              {result.content}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </>
+  );
 
   return (
     <>
@@ -145,18 +167,7 @@ const PostContent = ({ result }) => {
               {테이블(result.매물종류)}
             </tbody>
           </table>
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100">
-              <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
-                  내용
-                </dt>
-                <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  {result.content}
-                </dd>
-              </div>
-            </dl>
-          </div>
+          {내용}
         </div>
       )}
       {result.매물종류 === "상가건물" && (
@@ -168,18 +179,7 @@ const PostContent = ({ result }) => {
               {테이블(result.매물종류)}
             </tbody>
           </table>
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100">
-              <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
-                  내용
-                </dt>
-                <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  {result.content}
-                </dd>
-              </div>
-            </dl>
-          </div>
+          {내용}
         </div>
       )}
       {result.매물종류 === "상가주택" && (
@@ -191,18 +191,7 @@ const PostContent = ({ result }) => {
               {테이블(result.매물종류)}
             </tbody>
           </table>
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100">
-              <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
-                  내용
-                </dt>
-                <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  {result.content}
-                </dd>
-              </div>
-            </dl>
-          </div>
+          {내용}
         </div>
       )}
       {result.매물종류 === "상가점포" && (
@@ -214,18 +203,7 @@ const PostContent = ({ result }) => {
               {테이블(result.매물종류)}
             </tbody>
           </table>
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100">
-              <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
-                  내용
-                </dt>
-                <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  {result.content}
-                </dd>
-              </div>
-            </dl>
-          </div>
+          {내용}
         </div>
       )}
       {result.매물종류 === "빌라" && (
@@ -237,18 +215,7 @@ const PostContent = ({ result }) => {
               {테이블(result.매물종류)}
             </tbody>
           </table>
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100">
-              <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
-                  내용
-                </dt>
-                <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  {result.content}
-                </dd>
-              </div>
-            </dl>
-          </div>
+          {내용}
         </div>
       )}
       {result.매물종류 === "단독" && (
@@ -260,18 +227,7 @@ const PostContent = ({ result }) => {
               {테이블(result.매물종류)}
             </tbody>
           </table>
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100">
-              <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
-                  내용
-                </dt>
-                <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  {result.content}
-                </dd>
-              </div>
-            </dl>
-          </div>
+          {내용}
         </div>
       )}
       {result.매물종류 === "토지" && (
@@ -283,18 +239,7 @@ const PostContent = ({ result }) => {
               {테이블(result.매물종류)}
             </tbody>
           </table>
-          <div class="mt-6 border-t border-gray-100">
-            <dl class="divide-y divide-gray-100">
-              <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-                <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
-                  내용
-                </dt>
-                <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
-                  {result.content}
-                </dd>
-              </div>
-            </dl>
-          </div>
+          {내용}
         </div>
       )}
     </>

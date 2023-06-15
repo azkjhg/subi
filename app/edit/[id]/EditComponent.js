@@ -555,13 +555,13 @@ const EditComponent = ({ result }) => {
       )}
       {tradeType === "년세" && (
         <>
-          <span>년세가 : </span>
+          보증금:
           <input
             name="금액1"
             placeholder="보증금"
             defaultValue={result.금액1}
           />
-          만원{" "}
+          만원 / 년세금:
           <input
             name="금액2"
             placeholder="년세금"
@@ -573,13 +573,13 @@ const EditComponent = ({ result }) => {
       )}
       {tradeType === "월세" && (
         <>
-          <span>월세가 : </span>
+          보증금:
           <input
             name="금액1"
             placeholder="보증금"
             defaultValue={result.금액1}
           />
-          만원{" "}
+          만원 / 월세금:
           <input
             name="금액2"
             placeholder="월세금"
@@ -601,6 +601,14 @@ const EditComponent = ({ result }) => {
           <input name="거래유형" value="전세" style={{ display: "none" }} />
         </>
       )}
+      <br/>
+      <span>유튜브 링크 : </span>
+      <input
+        name="유튜브링크"
+        placeholder="유튜브링크"
+        defaultValue={result.유튜브링크}
+      />
+      <br />
     </>
   );
 

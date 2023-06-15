@@ -233,6 +233,7 @@ const Page = () => {
       소재지: event.target.소재지.value,
       금액1: event.target.금액1.value,
       금액2: event.target.금액2 && event.target.금액2.value,
+      유튜브링크: event.target.유튜브링크.value,
     };
 
     if (category == "아파트") {
@@ -427,6 +428,7 @@ const Page = () => {
           <span>매매가 : </span>
           <input name="금액1" placeholder="매매금" />
           만원
+          <br />
         </>
       )}
       {tradeType === "년세" && (
@@ -435,6 +437,7 @@ const Page = () => {
           <input name="금액1" placeholder="보증금" />
           만원 <input name="금액2" placeholder="년세금" />
           만원
+          <br />
         </>
       )}
       {tradeType === "월세" && (
@@ -443,6 +446,7 @@ const Page = () => {
           <input name="금액1" placeholder="보증금" />
           만원 <input name="금액2" placeholder="월세금" />
           만원
+          <br />
         </>
       )}
       {tradeType === "전세" && (
@@ -450,8 +454,13 @@ const Page = () => {
           <span>전세가 : </span>
           <input name="금액1" placeholder="전세금" />
           만원
+          <br />
         </>
       )}
+      <br/>
+      <span>유튜브 링크 : </span>
+      <input name="유튜브링크" placeholder="유튜브링크" />
+      <br />
     </>
   );
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-const Card = ({ result, children }) => {
+const Card = ({ result, list }) => {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {result.map((item, i) => {
@@ -15,11 +15,12 @@ const Card = ({ result, children }) => {
         let 뱃지2;
         // let 뱃지3
         let 면적;
+        let 배경색;
         if (item.매물종류 == "아파트") {
           뱃지 = (
             <span
-              class="absolute left-2 top-[176px] 
-              bg-blue-100 text-blue-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded "
+              class="
+              bg-blue-100 text-blue-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500"
             >
               {item.매물종류}
             </span>
@@ -28,8 +29,8 @@ const Card = ({ result, children }) => {
         if (item.매물종류 == "상가건물") {
           뱃지 = (
             <span
-              class="absolute left-2 top-[176px] 
-              bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded "
+              class="
+              bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500"
             >
               {item.매물종류}
             </span>
@@ -37,64 +38,68 @@ const Card = ({ result, children }) => {
         }
         if (item.매물종류 == "상가주택") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
+            <span class=" bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "상가점포") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
+            <span class=" bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "빌라") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
+            <span class=" bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "단독") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-purple-100 text-purple-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
+            <span class=" bg-purple-100 text-purple-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "토지") {
           뱃지 = (
-            <span class="absolute left-2 top-[176px] bg-green-100 text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded ">
+            <span class=" bg-green-100 text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
 
         if (item.거래유형 == "매매") {
+          배경색 = "text-base rounded-lg bg-red-100 px-2 my-2";
           뱃지2 = (
-            <span class=" bg-gray-100 text-gray-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-gray-500">
+            <span class=" text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-red-500">
               {item.거래유형}
             </span>
           );
         }
         if (item.거래유형 == "년세") {
+          배경색 = "text-base rounded-lg bg-yellow-100 px-2 my-2";
           뱃지2 = (
-            <span class=" bg-yellow-100 text-yellow-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-yellow-300">
+            <span class="  text-yellow-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-yellow-300">
               {item.거래유형}
             </span>
           );
         }
         if (item.거래유형 == "월세") {
+          배경색 = "text-base rounded-lg bg-green-100 px-2 my-2";
           뱃지2 = (
-            <span class=" bg-pink-100 text-pink-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-pink-400">
+            <span class="  text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-green-400">
               {item.거래유형}
             </span>
           );
         }
         if (item.거래유형 == "전세") {
+          배경색 = "text-base rounded-lg bg-indigo-100 px-2 my-2";
           뱃지2 = (
-            <span class=" bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-indigo-400">
+            <span class="  text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-indigo-400">
               {item.거래유형}
             </span>
           );
@@ -204,12 +209,7 @@ const Card = ({ result, children }) => {
                   삭제
                 </p> */}
               {/* 이건 어드민 페이지에서 */}
-              <article
-                className="rounded-md overflow-hidden shadow-md hover:shadow-xl
-  relative "
-              >
-                {뱃지}
-
+              <article className="rounded-md overflow-hidden shadow-md hover:shadow-xl relative">
                 <div className=" w-full overflow-hidden rounded-md bg-gray-200  group-hover:opacity-75 h-52">
                   {item.urls[0] && (
                     <Image
@@ -223,24 +223,46 @@ const Card = ({ result, children }) => {
                 </div>
                 <div className="flex flex-col items-center py-2 px-2">
                   <div className="w-full flex justify-between">
-                    <span className="self-">{뱃지2}</span>
+                    <div className="mb-1">
+                      {뱃지}
+                      {뱃지2}
+                    </div>
                     <span className="self-end text-gray-700">{item.date}</span>
                   </div>
                   <h3 className="text-lg font-bold">
-                    {item.소재지 ? item.소재지 : "ㅤ"}
+                    {item.title ? item.title : "ㅤ"}
                   </h3>
                   <p className="w-full truncate text-center">
-                    {item.title ? item.title : "ㅤ"}
+                    {item.시 ? `${item.시} ${item.동} ${item.소재지}` : "ㅤ"}
                   </p>
                   {면적}
                   {
-                    <span className="text-base rounded-lg bg-green-100 px-2 my-2">
+                    <span className={배경색}>
                       {item.금액 ? `${item.거래유형}가 ${item.금액}만원` : "ㅤ"}
                     </span>
                   }
                 </div>
               </article>
             </Link>
+
+            {list ? (
+              <div className="flex justify-between">
+                <div className="text-xl">
+                  <Link href={`/edit/${result[i]._id.toString()}`}>수정</Link>
+                </div>
+                <div className="text-xl">
+                  {" "}
+                  <p
+                    onClick={(e) => {
+                      console.log(i, "한단계 위 i");
+                      DataDelete(e, i);
+                    }}
+                  >
+                    삭제
+                  </p>
+                </div>
+              </div>
+            ) : null}
           </div>
         );
       })}
