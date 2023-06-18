@@ -26,9 +26,9 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="ko" className={sans.className}>
       <body className="flex flex-col w-full max-w-screen-2xl mx-auto">
-        <header className="flex justify-between items-center px-4 py-1 sticky top-0  z-[9999] bg-green-50">
+        <header className="flex justify-between items-center px-4 py-2 sticky top-0  z-[9999] bg-green-50">
           <Link href="/" >
-            <Image src={"/images/긴로고투명.png"} width={220} height={32} alt="logo"/>
+            <Image src={"/images/긴로고투명.png"} width={180} height={32} alt="logo"/>
           </Link>
           {session ? <nav className="flex gap-6">
             <Link href="/list">List</Link>

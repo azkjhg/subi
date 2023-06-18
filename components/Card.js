@@ -277,6 +277,7 @@ const formatAmount = (value) => {
                   <h3 className="text-lg font-bold">
                     {item.title ? item.title : "ㅤ"}
                   </h3>
+                  <div className="디바이더"></div>
                   <p className="w-full truncate text-center">
                     {item.시 ? `${item.시} ${item.동} ${item.소재지}` : "ㅤ"}
                   </p>

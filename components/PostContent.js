@@ -3,7 +3,19 @@ import React from "react";
 import YouTubeP from "@/components/Youtube";
 
 const PostContent = ({ result }) => {
+  const formatAmount = (value) => {
+    const parts = value.split('');
+    let formattedValue = '';
   
+    while (parts.length > 0) {
+      formattedValue = parts.splice(-3).join('') + formattedValue;
+      if (parts.length > 0) {
+        formattedValue = ',' + formattedValue;
+      }
+    }
+  
+    return formattedValue;
+  };
 
   const 금액1 = () => {
     if (result.거래유형 == "매매") {
@@ -107,7 +119,7 @@ const PostContent = ({ result }) => {
         <th scope="row" class="py-2 font-medium text-slate-600  bg-gray-50 ">
           소재지
         </th>
-        <td class="px-2 py-2" colspan="2" whitespace-nowrap>
+        <td class="px-2 py-2" colspan="3" whitespace-nowrap>
           {`${result.시} ${result.동} ${result.소재지}`}
         </td>
       </tr>
@@ -116,11 +128,11 @@ const PostContent = ({ result }) => {
           {금액1()}
         </th>
         <td class="px-2 py-2 whitespace-nowrap">
-          {result.금액1 && `${result.금액1}만원`}
+          {result.금액1 && `${formatAmount(result.금액1)}만원`}
         </td>
         <td class="py-2 font-medium text-slate-600  bg-gray-50 ">{금액2()}</td>
         <td class="px-2 py-2 whitespace-nowrap">
-          {result.금액2 && `${result.금액2}만원`}
+          {result.금액2 && `${formatAmount(result.금액2)}만원`}
         </td>
       </tr>
     </>
