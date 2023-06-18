@@ -46,6 +46,26 @@ const EditComponent = ({ result }) => {
   const handleLineChange = (e) => {
     setSelectedLine(e.target.value);
   };
+
+  const [inputPrice, setInputPrice] = useState(result.금액1);
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    const filteredValue = inputValue.replace(/[^0-9]/g, ''); // 숫자만 허용하도록 필터링
+    setInputPrice(filteredValue)
+
+    // 필터링된 값을 사용하거나 상태에 저장할 수 있습니다.
+    // 예: setInputValue(filteredValue);
+  };
+  const [inputPrice2, setInputPrice2] = useState(result.금액2);
+  const handleInputChange2 = (e) => {
+    const inputValue = e.target.value;
+    const filteredValue = inputValue.replace(/[^0-9]/g, ''); // 숫자만 허용하도록 필터링
+    setInputPrice2(filteredValue)
+
+    // 필터링된 값을 사용하거나 상태에 저장할 수 있습니다.
+    // 예: setInputValue(filteredValue);
+  };
+
   const templates = (event) => {
     if (event.target.매물종류.value === "아파트") {
       return {
@@ -548,7 +568,7 @@ const EditComponent = ({ result }) => {
       {tradeType === "매매" && (
         <>
           <span>매매가 : </span>
-          <input name="금액1" placeholder="금액" defaultValue={result.금액1} />
+          <input name="금액1" placeholder="금액" value={inputPrice} onChange={handleInputChange}/>
           만원
           <input name="거래유형" value="매매" style={{ display: "none" }} />
         </>
@@ -559,13 +579,13 @@ const EditComponent = ({ result }) => {
           <input
             name="금액1"
             placeholder="보증금"
-            defaultValue={result.금액1}
+            value={inputPrice} onChange={handleInputChange}
           />
           만원 / 년세금:
           <input
             name="금액2"
             placeholder="년세금"
-            defaultValue={result.금액2}
+            value={inputPrice2} onChange={handleInputChange2}
           />
           만원
           <input name="거래유형" value="년세" style={{ display: "none" }} />
@@ -577,13 +597,13 @@ const EditComponent = ({ result }) => {
           <input
             name="금액1"
             placeholder="보증금"
-            defaultValue={result.금액1}
+            value={inputPrice} onChange={handleInputChange}
           />
           만원 / 월세금:
           <input
             name="금액2"
             placeholder="월세금"
-            defaultValue={result.금액2}
+            value={inputPrice2} onChange={handleInputChange2}
           />
           만원
           <input name="거래유형" value="월세" style={{ display: "none" }} />
@@ -595,7 +615,7 @@ const EditComponent = ({ result }) => {
           <input
             name="금액1"
             placeholder="전세금"
-            defaultValue={result.금액1}
+            value={inputPrice} onChange={handleInputChange}
           />
           만원
           <input name="거래유형" value="전세" style={{ display: "none" }} />

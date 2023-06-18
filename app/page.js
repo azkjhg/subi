@@ -24,7 +24,7 @@ export default async function Home() {
   
   return (
     <div>
-      <div className={pretendard.className}>
+      <div className={`${pretendard.className} mx-auto`}>
       <main className="banner" >
         <div className="메인아이템">
         <div className="banner-info xs:w-96">

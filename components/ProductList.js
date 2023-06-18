@@ -29,37 +29,7 @@ export default function ProductList({ result }) {
     author: '관리자
   } */
 
-  const DataDelete = (e, i) => {
-    if (result.url && result.imageRef) {
-      const imageRef = ref(storage, result.imageRef._location.path_);
 
-      deleteObject(imageRef)
-        .then(() => {
-          console.log("이미지 삭제 완료");
-        })
-        .catch((error) => {
-          console.error("이미지 삭제 에러:", error);
-        });
-    }
-    console.log(result, e, i, "리절트가 머고");
-    fetch("/api/post/delete", {
-      method: "POST",
-      body: result[i]._id.toString(),
-    })
-      .then(async (response) => {
-        return response.json();
-      })
-      .then((response) => {
-        if (response === "삭제 안됨") {
-          return;
-        } else {
-          e.target.parentElement.style.opacity = 0;
-          setTimeout(() => {
-            e.target.parentElement.style.display = "none";
-          }, 1000);
-        }
-      });
-  };
 
 
   // const [newResult, setNewResult] = useState(result);

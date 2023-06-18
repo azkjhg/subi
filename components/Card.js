@@ -2,14 +2,59 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 const Card = ({ result, list }) => {
+  const DataDelete = (e, i) => {
+    if (result.url && result.imageRef) {
+      const imageRef = ref(storage, result.imageRef._location.path_);
+
+      deleteObject(imageRef)
+        .then(() => {
+          console.log("이미지 삭제 완료");
+        })
+        .catch((error) => {
+          console.error("이미지 삭제 에러:", error);
+        });
+    }
+    console.log(result, e, i, "리절트가 머고");
+    fetch("/api/post/delete", {
+      method: "POST",
+      body: result[i]._id.toString(),
+    })
+      .then(async (response) => {
+        return response.json();
+      })
+      .then((response) => {
+        if (response === "삭제 안됨") {
+          return;
+        } else {
+          e.target.parentElement.parentElement.parentElement.style.opacity = 0;
+          setTimeout(() => {
+            e.target.parentElement.parentElement.parentElement.style.display = "none";
+          }, 1000);
+        }
+      });
+  };
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {result.map((item, i) => {
+const formatAmount = (value) => {
+  const parts = value.split('');
+  let formattedValue = '';
+
+  while (parts.length > 0) {
+    formattedValue = parts.splice(-3).join('') + formattedValue;
+    if (parts.length > 0) {
+      formattedValue = ',' + formattedValue;
+    }
+  }
+
+  return formattedValue;
+};
+
         if (!item.금액2) {
-          item.금액 = item.금액1;
+          item.금액 = formatAmount(item.금액1);
         }
         if (item.금액2) {
-          item.금액 = `${item.금액1}/${item.금액1}`;
+          item.금액 = `${formatAmount(item.금액1)}/${formatAmount(item.금액2)}`;
         }
         let 뱃지;
         let 뱃지2;

@@ -3,6 +3,8 @@ import React from "react";
 import YouTubeP from "@/components/Youtube";
 
 const PostContent = ({ result }) => {
+  
+
   const 금액1 = () => {
     if (result.거래유형 == "매매") {
       return "매매가";

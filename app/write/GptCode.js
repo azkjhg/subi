@@ -152,6 +152,25 @@ const Page = () => {
     setSelectedLine(e.target.value);
   };
 
+  const [inputPrice, setInputPrice] = useState(null);
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    const filteredValue = inputValue.replace(/[^0-9]/g, ''); // 숫자만 허용하도록 필터링
+    setInputPrice(filteredValue)
+
+    // 필터링된 값을 사용하거나 상태에 저장할 수 있습니다.
+    // 예: setInputValue(filteredValue);
+  };
+  const [inputPrice2, setInputPrice2] = useState(null);
+  const handleInputChange2 = (e) => {
+    const inputValue = e.target.value;
+    const filteredValue = inputValue.replace(/[^0-9]/g, ''); // 숫자만 허용하도록 필터링
+    setInputPrice2(filteredValue)
+
+    // 필터링된 값을 사용하거나 상태에 저장할 수 있습니다.
+    // 예: setInputValue(filteredValue);
+  };
+
   const uploadAndSubmitForm = async (event) => {
     event.preventDefault();
     let imageUpload = [];
@@ -426,7 +445,7 @@ const Page = () => {
       {tradeType === "매매" && (
         <>
           <span>매매가 : </span>
-          <input name="금액1" placeholder="매매금" />
+          <input name="금액1" placeholder="매매금" value={inputPrice} onChange={handleInputChange}/>
           만원
           <br />
         </>
@@ -434,8 +453,8 @@ const Page = () => {
       {tradeType === "년세" && (
         <>
           <span>년세가 : </span>
-          <input name="금액1" placeholder="보증금" />
-          만원 <input name="금액2" placeholder="년세금" />
+          <input name="금액1" placeholder="보증금" value={inputPrice} onChange={handleInputChange} />
+          만원 <input name="금액2" placeholder="년세금" value={inputPrice2} onChange={handleInputChange2}/>
           만원
           <br />
         </>
@@ -443,8 +462,8 @@ const Page = () => {
       {tradeType === "월세" && (
         <>
           <span>월세가 : </span>
-          <input name="금액1" placeholder="보증금" />
-          만원 <input name="금액2" placeholder="월세금" />
+          <input name="금액1" placeholder="보증금" value={inputPrice} onChange={handleInputChange}/>
+          만원 <input name="금액2" placeholder="월세금" value={inputPrice2} onChange={handleInputChange2}/>
           만원
           <br />
         </>
@@ -452,14 +471,14 @@ const Page = () => {
       {tradeType === "전세" && (
         <>
           <span>전세가 : </span>
-          <input name="금액1" placeholder="전세금" />
+          <input name="금액1" placeholder="전세금" value={inputPrice} onChange={handleInputChange}/>
           만원
           <br />
         </>
       )}
       <br/>
       <span>유튜브 링크 : </span>
-      <input name="유튜브링크" placeholder="유튜브링크" />
+      <input name="유튜브링크" placeholder="유튜브링크" onChange={handleInputChange}/>
       <br />
     </>
   );

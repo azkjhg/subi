@@ -17,8 +17,9 @@ export async function generateMetadata(props) {
 
 
   return {
-    title: `${result.소재지} ${result.매물종류} ${result.거래유형} ${result.title}`,
-    description: `${result.content}`
+    title: `양수비 공인중개사 사무소 ${result && result.시} ${result && result.동} ${result && result.소재지} ${result && result} ${result && result.거래유형}`,
+    description: `${result && result.title} ${result && result.content}`,
+    icons: { icon: "/favicon.ico" },
   };
 }
 
@@ -30,11 +31,26 @@ const page = async (props) => {
     .collection("post")
     .findOne({ _id: new ObjectId(props.params.id) });
     console.log(result)
+
+    const formatAmount = (value) => {
+      const parts = value.split('');
+      let formattedValue = '';
+    
+      while (parts.length > 0) {
+        formattedValue = parts.splice(-3).join('') + formattedValue;
+        if (parts.length > 0) {
+          formattedValue = ',' + formattedValue;
+        }
+      }
+    
+      return formattedValue;
+    };
+console.log(result , '리절트가 없나?')
    if(!result.금액2){
-              result.금액 = result.금액1
+              result.금액 = formatAmount(result.금액1)
             }
-            if(result.금액2){
-              result.금액 = `${result.금액1}/${result.금액1}`
+            else {
+              result.금액 = `${formatAmount(result.금액1)}/${formatAmount(result.금액2)}`
             }
   
   return (

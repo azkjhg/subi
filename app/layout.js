@@ -4,6 +4,7 @@ import { Open_Sans, Roboto, Gowun_Batang } from "next/font/google";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const sans = Open_Sans({ subsets: ["latin"] });
@@ -16,6 +17,7 @@ const pretendard = Gowun_Batang({
 export const metadata = {
   title: "제주도 부동산 - 양수비 공인중개사 사무소",
   description: "제주도의 부동산을 소개합니다.",
+  icons: { icon: "/favicon.ico" },
 };
 
 export default async function RootLayout({ children }) {
@@ -24,9 +26,9 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="ko" className={sans.className}>
       <body className="flex flex-col w-full max-w-screen-2xl mx-auto">
-        <header className="flex justify-between items-center p-4 sticky top-0  z-[9999] bg-green-50">
+        <header className="flex justify-between items-center px-4 py-1 sticky top-0  z-[9999] bg-green-50">
           <Link href="/" >
-            Home
+            <Image src={"/images/긴로고투명.png"} width={220} height={32} alt="logo"/>
           </Link>
           {session ? <nav className="flex gap-6">
             <Link href="/list">List</Link>
