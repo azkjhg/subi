@@ -34,11 +34,11 @@ const BannerCarousel = () => {
               제주도의 부동산을 소개합니다.
             </p>
             <hr />
-            <div className="banner-info-text2 text-2xl py-3">
-              <p>010-8565-5310</p>
-              <p>064-753-5310</p>
+            <div className="banner-info-text text-2xl py-3">
+              <p>010-8565-5310 / 064-753-5310</p>
               <h2>대표/공인중개사 양수비</h2>
             </div>
+            <p className="banner-info-text-small self">등록번호: 50110-2020-00015<br />제주시 천수로63(일도이동)</p>
             
           </div>
           </div>

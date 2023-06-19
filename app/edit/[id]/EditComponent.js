@@ -176,7 +176,16 @@ const EditComponent = ({ result }) => {
   };
   const uploadAndSubmitForm = async (event) => {
     event.preventDefault(); // Prevent the default form submission behavior
-    if (image === result.urls[0] && image !== null) {
+    let imageUpload = [];
+      imageUpload = [
+        imageUpload1,
+        imageUpload2,
+        imageUpload3,
+        imageUpload4,
+        imageUpload5,
+      ];
+      imageUpload = imageUpload.filter((item) => item !== null);
+    if (imageUpload === result.urls[0] && imageUpload !== null) {
       console.log("기존 이미지입니다.");
 
       let formData = {
@@ -260,15 +269,7 @@ const EditComponent = ({ result }) => {
         });
     } else {
       event.preventDefault();
-      let imageUpload = [];
-      imageUpload = [
-        imageUpload1,
-        imageUpload2,
-        imageUpload3,
-        imageUpload4,
-        imageUpload5,
-      ];
-      imageUpload = imageUpload.filter((item) => item !== null);
+      
 
 
       if (imageUpload == null) {

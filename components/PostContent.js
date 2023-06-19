@@ -119,7 +119,7 @@ const PostContent = ({ result }) => {
         <th scope="row" className="py-2 font-medium text-slate-600  bg-gray-50 ">
           소재지
         </th>
-        <td className="px-2 py-2" colspan="3" whitespace-nowrap>
+        <td className="px-2 py-2" colSpan="3" whitespace-nowrap>
           {`${result.시} ${result.동} ${result.소재지}`}
         </td>
       </tr>
@@ -141,7 +141,7 @@ const PostContent = ({ result }) => {
     <>
       <thead className="text-xs text-gray-700 uppercase ">
         <tr>
-          <th scope="col" className="px-6 py-3 text-base bg-gray-50 " colspan="4">
+          <th scope="col" className="px-6 py-3 text-base bg-gray-50 " colSpan="4">
             매물 정보
           </th>
         </tr>
