@@ -45,7 +45,7 @@ const PostContent = ({ result }) => {
       return "";
     }
   };
-  console.log(result);
+
 
   const 테이블 = (category) => {
     const 항목들 = formType(category, "디테일", result);
@@ -64,24 +64,24 @@ const PostContent = ({ result }) => {
       return [시작, 끝]; // [0, 1], [2,3]
     };
 
-    console.log([...Array(총행의수)], "항목들");
+
     return [...Array(총행의수)].map((_, 행인덱스) => {
-      console.log(행인덱스, "행인덱스");
+
       return (
         <>
-          <tr class="border-b border-gray-200 ">
+          <tr className="border-b border-gray-200 ">
             {해당행의항목들(행인덱스).map((item, i) => {
               if (i == 0) {
-                console.log(item, "i % 2 == 0");
+
                 return (
                   <>
                     <th
                       scope="row"
-                      class="py-2 font-medium text-slate-600 bg-gray-50 "
+                      className="py-2 font-medium text-slate-600 bg-gray-50 "
                     >
                       {항목들[item] ? 항목들[item].이름 : ""}
                     </th>
-                    <td class="px-2 py-2 whitespace-nowrap">
+                    <td className="px-2 py-2 whitespace-nowrap">
                       {항목들[item] ? 항목들[item].값 : ""}
                     </td>
                   </>
@@ -89,10 +89,10 @@ const PostContent = ({ result }) => {
               } else {
                 return (
                   <>
-                    <td class="py-2 font-medium text-slate-600  bg-gray-50 ">
+                    <td className="py-2 font-medium text-slate-600  bg-gray-50 ">
                       {항목들[item] ? 항목들[item].이름 : ""}
                     </td>
-                    <td class="px-2 py-2 whitespace-nowrap">
+                    <td className="px-2 py-2 whitespace-nowrap">
                       {항목들[item] ? 항목들[item].값 : ""}
                     </td>
                   </>
@@ -107,31 +107,31 @@ const PostContent = ({ result }) => {
 
   const 기본양식 = (
     <>
-      <tr class="border-b border-gray-200 ">
-        <th scope="row" class=" py-2 font-medium text-slate-600  bg-gray-50 ">
+      <tr className="border-b border-gray-200 ">
+        <th scope="row" className=" py-2 font-medium text-slate-600  bg-gray-50 ">
           <span>매물종류</span>
         </th>
-        <td class="px-2 py-2 whitespace-nowrap">{result.매물종류}</td>
-        <td class="py-2 font-medium text-slate-600  bg-gray-50 ">거래유형</td>
-        <td class="px-2 py-2 whitespace-nowrap">{result.거래유형}</td>
+        <td className="px-2 py-2 whitespace-nowrap">{result.매물종류}</td>
+        <td className="py-2 font-medium text-slate-600  bg-gray-50 ">거래유형</td>
+        <td className="px-2 py-2 whitespace-nowrap">{result.거래유형}</td>
       </tr>
-      <tr class="border-b border-gray-200 ">
-        <th scope="row" class="py-2 font-medium text-slate-600  bg-gray-50 ">
+      <tr className="border-b border-gray-200 ">
+        <th scope="row" className="py-2 font-medium text-slate-600  bg-gray-50 ">
           소재지
         </th>
-        <td class="px-2 py-2" colspan="3" whitespace-nowrap>
+        <td className="px-2 py-2" colspan="3" whitespace-nowrap>
           {`${result.시} ${result.동} ${result.소재지}`}
         </td>
       </tr>
-      <tr class="border-b border-gray-200 ">
-        <th scope="row" class="py-2 font-medium text-slate-600  bg-gray-50 ">
+      <tr className="border-b border-gray-200 ">
+        <th scope="row" className="py-2 font-medium text-slate-600  bg-gray-50 ">
           {금액1()}
         </th>
-        <td class="px-2 py-2 whitespace-nowrap">
+        <td className="px-2 py-2 whitespace-nowrap">
           {result.금액1 && `${formatAmount(result.금액1)}만원`}
         </td>
-        <td class="py-2 font-medium text-slate-600  bg-gray-50 ">{금액2()}</td>
-        <td class="px-2 py-2 whitespace-nowrap">
+        <td className="py-2 font-medium text-slate-600  bg-gray-50 ">{금액2()}</td>
+        <td className="px-2 py-2 whitespace-nowrap">
           {result.금액2 && `${formatAmount(result.금액2)}만원`}
         </td>
       </tr>
@@ -139,9 +139,9 @@ const PostContent = ({ result }) => {
   );
   const T헤드 = (
     <>
-      <thead class="text-xs text-gray-700 uppercase ">
+      <thead className="text-xs text-gray-700 uppercase ">
         <tr>
-          <th scope="col" class="px-6 py-3 text-base bg-gray-50 " colspan="4">
+          <th scope="col" className="px-6 py-3 text-base bg-gray-50 " colspan="4">
             매물 정보
           </th>
         </tr>
@@ -155,13 +155,13 @@ const PostContent = ({ result }) => {
           <YouTubeP 유튜브링크={result.유튜브링크} />
 
       )}
-      <div class=" border-t border-gray-100">
-        <dl class="divide-y divide-gray-100">
-          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-            <dt class="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
+      <div className=" border-t border-gray-100">
+        <dl className="divide-y divide-gray-100">
+          <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt className="mx-2 text-sm sm:text-sm md:text-base lg:text-lg font-medium leading-6 text-gray-900">
               내용
             </dt>
-            <dd class="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+            <dd className="mt-1 text-sm sm:text-sm md:text-base lg:text-lg leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
               {result.content}
             </dd>
           </div>
@@ -174,7 +174,7 @@ const PostContent = ({ result }) => {
     <>
       {result.매물종류 === "아파트" && (
         <div>
-          <table class=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
+          <table className=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
             {T헤드}
             <tbody>
               {기본양식}
@@ -186,7 +186,7 @@ const PostContent = ({ result }) => {
       )}
       {result.매물종류 === "상가건물" && (
         <div>
-          <table class=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
+          <table className=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
             {T헤드}
             <tbody>
               {기본양식}
@@ -198,7 +198,7 @@ const PostContent = ({ result }) => {
       )}
       {result.매물종류 === "상가주택" && (
         <div>
-          <table class=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
+          <table className=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
             {T헤드}
             <tbody>
               {기본양식}
@@ -210,7 +210,7 @@ const PostContent = ({ result }) => {
       )}
       {result.매물종류 === "상가점포" && (
         <div>
-          <table class=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
+          <table className=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
             {T헤드}
             <tbody>
               {기본양식}
@@ -222,7 +222,7 @@ const PostContent = ({ result }) => {
       )}
       {result.매물종류 === "빌라" && (
         <div>
-          <table class=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
+          <table className=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
             {T헤드}
             <tbody>
               {기본양식}
@@ -234,7 +234,7 @@ const PostContent = ({ result }) => {
       )}
       {result.매물종류 === "단독" && (
         <div>
-          <table class=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
+          <table className=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
             {T헤드}
             <tbody>
               {기본양식}
@@ -246,7 +246,7 @@ const PostContent = ({ result }) => {
       )}
       {result.매물종류 === "토지" && (
         <div>
-          <table class=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
+          <table className=" w-full text-sm sm:text-sm md:text-base lg:text-lg  text-center text-black ">
             {T헤드}
             <tbody>
               {기본양식}

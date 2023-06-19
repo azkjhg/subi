@@ -14,7 +14,7 @@ export default async function handler(request, response) {
       return a;
     });
 
-    console.log(result, "리절트");
+
     return response.status(200).json(result);
   } catch (error) {
     return response.status(500).json("업로드 실패");

@@ -16,7 +16,7 @@ export default async function handler(request, response) {
   const day = String(currentDate.getDate()).padStart(2, '0');
 
   const dateString = `${year}-${month}-${day}`;
-  console.log(dateString); // 예시 출력: 2023-06-09
+  // console.log(dateString); // 예시 출력: 2023-06-09
 
   request.body.date = dateString
 

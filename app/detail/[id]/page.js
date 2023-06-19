@@ -13,7 +13,7 @@ export async function generateMetadata(props) {
   let result = await db
     .collection("post")
     .findOne({ _id: new ObjectId(props.params.id) });
-    console.log(result)
+
 
 
   return {
@@ -30,7 +30,7 @@ const page = async (props) => {
   let result = await db
     .collection("post")
     .findOne({ _id: new ObjectId(props.params.id) });
-    console.log(result)
+
 
     const formatAmount = (value) => {
       const parts = value.split('');
@@ -45,7 +45,7 @@ const page = async (props) => {
     
       return formattedValue;
     };
-console.log(result , '리절트가 없나?')
+
    if(!result.금액2){
               result.금액 = formatAmount(result.금액1)
             }

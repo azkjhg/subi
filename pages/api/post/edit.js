@@ -4,9 +4,9 @@ export default async function handler(request, response) {
   const client = await connectDB;
   const db = client.db("subi");
   request.body = JSON.parse(request.body);
-  console.log(request.body, "리퀘스트.바디");
+  console.log(request.body, "에딧 리퀘스트.바디");
   const templates = () => {
-    if (request.body.매물종류.value === "아파트") {
+    if (request.body.매물종류 === "아파트") {
       return {
         공급면적:request.body.공급면적,
                   전용면적:request.body.전용면적,
@@ -24,7 +24,7 @@ export default async function handler(request, response) {
                   총주차대수:request.body.총주차대수,
                   난방방식:request.body.난방방식,
       }}
-      else if (request.body.매물종류.value === "상가건물") {
+      else if (request.body.매물종류 === "상가건물") {
         return {
           연면적:request.body.연면적,
             대지면적:request.body.대지면적,
@@ -39,7 +39,7 @@ export default async function handler(request, response) {
             총주차대수:request.body.총주차대수,
         };
     }
-    else if (request.body.매물종류.value === "상가주택") {
+    else if (request.body.매물종류 === "상가주택") {
       return {
         대지면적:request.body.대지면적,
           연면적:request.body.연면적,
@@ -54,7 +54,7 @@ export default async function handler(request, response) {
           총주차대수:request.body.총주차대수,
       };
   }
-  else if (request.body.매물종류.value === "상가점포") {
+  else if (request.body.매물종류 === "상가점포") {
     return {
       계약면적:request.body.계약면적,
         전용면적:request.body.전용면적,
@@ -72,7 +72,7 @@ export default async function handler(request, response) {
         총주차대수:request.body.총주차대수,
     };
 }
-else if (request.body.매물종류.value === "빌라") {
+else if (request.body.매물종류 === "빌라") {
   return {
     공급면적:request.body.공급면적,
     전용면적:request.body.전용면적,
@@ -91,7 +91,7 @@ else if (request.body.매물종류.value === "빌라") {
     건물보안:request.body.건물보안,
   };
 }
-else if (request.body.매물종류.value === "단독") {
+else if (request.body.매물종류 === "단독") {
   return {
     대지면적:request.body.대지면적,
       건축면적:request.body.건축면적,
@@ -109,7 +109,7 @@ else if (request.body.매물종류.value === "단독") {
       총주차대수:request.body.총주차대수,
   };
 }
-else if (request.body.매물종류.value === "토지") {
+else if (request.body.매물종류 === "토지") {
   return {
     대지면적:request.body.대지면적,
       지목:request.body.지목,
@@ -249,7 +249,7 @@ if(request.body.매물종류 == '토지'){
     ...templates()
   }
 }
-console.log(form, '폼')
+console.log(form, '에딧 폼')
       await db.collection("post").updateOne(
         { _id: new ObjectId(request.body._id) },
         {

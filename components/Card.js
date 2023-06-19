@@ -14,7 +14,7 @@ const Card = ({ result, list }) => {
           console.error("이미지 삭제 에러:", error);
         });
     }
-    console.log(result, e, i, "리절트가 머고");
+
     fetch("/api/post/delete", {
       method: "POST",
       body: result[i]._id.toString(),
@@ -64,7 +64,7 @@ const formatAmount = (value) => {
         if (item.매물종류 == "아파트") {
           뱃지 = (
             <span
-              class="
+              className="
               bg-blue-100 text-blue-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500"
             >
               {item.매물종류}
@@ -74,7 +74,7 @@ const formatAmount = (value) => {
         if (item.매물종류 == "상가건물") {
           뱃지 = (
             <span
-              class="
+            className="
               bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500"
             >
               {item.매물종류}
@@ -83,35 +83,35 @@ const formatAmount = (value) => {
         }
         if (item.매물종류 == "상가주택") {
           뱃지 = (
-            <span class=" bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
+            <span className=" bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "상가점포") {
           뱃지 = (
-            <span class=" bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
+            <span className=" bg-red-100 text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "빌라") {
           뱃지 = (
-            <span class=" bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
+            <span className=" bg-indigo-100 text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "단독") {
           뱃지 = (
-            <span class=" bg-purple-100 text-purple-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
+            <span className=" bg-purple-100 text-purple-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
         }
         if (item.매물종류 == "토지") {
           뱃지 = (
-            <span class=" bg-green-100 text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
+            <span className=" bg-green-100 text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded border border-gray-500">
               {item.매물종류}
             </span>
           );
@@ -120,7 +120,7 @@ const formatAmount = (value) => {
         if (item.거래유형 == "매매") {
           배경색 = "text-base rounded-lg bg-red-100 px-2 my-2";
           뱃지2 = (
-            <span class=" text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-red-500">
+            <span className=" text-red-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-red-500">
               {item.거래유형}
             </span>
           );
@@ -128,7 +128,7 @@ const formatAmount = (value) => {
         if (item.거래유형 == "년세") {
           배경색 = "text-base rounded-lg bg-yellow-100 px-2 my-2";
           뱃지2 = (
-            <span class="  text-yellow-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-yellow-300">
+            <span className="  text-yellow-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-yellow-300">
               {item.거래유형}
             </span>
           );
@@ -136,7 +136,7 @@ const formatAmount = (value) => {
         if (item.거래유형 == "월세") {
           배경색 = "text-base rounded-lg bg-green-100 px-2 my-2";
           뱃지2 = (
-            <span class="  text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-green-400">
+            <span className="  text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-green-400">
               {item.거래유형}
             </span>
           );
@@ -144,7 +144,7 @@ const formatAmount = (value) => {
         if (item.거래유형 == "전세") {
           배경색 = "text-base rounded-lg bg-indigo-100 px-2 my-2";
           뱃지2 = (
-            <span class="  text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-indigo-400">
+            <span className="  text-indigo-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded  border border-indigo-400">
               {item.거래유형}
             </span>
           );
@@ -300,7 +300,7 @@ const formatAmount = (value) => {
                   {" "}
                   <p
                     onClick={(e) => {
-                      console.log(i, "한단계 위 i");
+
                       DataDelete(e, i);
                     }}
                   >

@@ -26,9 +26,9 @@ export default function ListItem({ result }) {
         };
 
         await deleteImage();
-        console.log(result);
+
       }
-      console.log(result, e, i, "리절트가 머고");
+
       fetch("/api/post/delete", {
         method: "POST",
         body: result[i]._id.toString(),

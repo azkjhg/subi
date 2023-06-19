@@ -222,8 +222,7 @@ const Page = () => {
     };
 
     await processImageUploads();
-    console.log(urls);
-    console.log(imageRefs);
+
 
     // const imageRef = ref(storage, `image/${imageUpload.name + v4()}`);
 

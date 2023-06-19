@@ -16,7 +16,7 @@ import MultiCarousel from "@/components/MultiCarousel";
 import formType from "@/service/formTypes";
 
 const EditComponent = ({ result }) => {
-  console.log(result, "에딧_리절트");
+
   const [image, setImage] = useState(result.urls[0]);
   const [imageUpload1, setImageUpload1] = useState(null);
   const [imageUpload2, setImageUpload2] = useState(null);
@@ -241,7 +241,7 @@ const EditComponent = ({ result }) => {
         };
       }
 
-      console.log(formData);
+      console.log(formData, '에딧폼데이터');
       await fetch("/api/post/edit", {
         method: "POST",
         body: JSON.stringify(formData),
@@ -269,7 +269,7 @@ const EditComponent = ({ result }) => {
         imageUpload5,
       ];
       imageUpload = imageUpload.filter((item) => item !== null);
-      console.log(imageUpload);
+
 
       if (imageUpload == null) {
         alert("이미지를 업로드해주세요.");
@@ -305,8 +305,7 @@ const EditComponent = ({ result }) => {
       };
 
       await processImageUploads();
-      console.log(urls);
-      console.log(imageRefs);
+
 
       let formData = {
         _id: result._id,
@@ -425,7 +424,6 @@ const EditComponent = ({ result }) => {
       };
 
       await deleteImage();
-      console.log(result);
 
       fetch("/api/image/delete", {
         method: "POST",
