@@ -27,7 +27,9 @@ const List = async () => {
   });
 
   return (
-    <div className="m-4">{result && <ListItem result={result} />}</div>
+    <div className="m-4">
+ 
+      {result && <ListItem result={result} />}</div>
   );
 };
 

@@ -25,6 +25,7 @@ export default function formType(category, 구분, result) {
   let 건축면적;
   let 지목;
   let 용도지역;
+  let 건물보안;
 
   if (구분 == "디테일") {
     공급면적 = {
@@ -130,6 +131,10 @@ export default function formType(category, 구분, result) {
     용도지역 = {
       이름: "용도지역",
       값: result.용도지역,
+    };
+    건물보안 = {
+      이름: "건물보안",
+      값: result.건물보안,
     };
   } else {
     공급면적 = (
@@ -315,6 +320,13 @@ export default function formType(category, 구분, result) {
         <br />
       </>
     );
+    건물보안 = (
+      <>
+        <span>건물보안 : </span>
+        <input name="건물보안" placeholder="건물보안" />
+        <br />
+      </>
+    );
   }
 
   if (category == "아파트") {
@@ -396,6 +408,7 @@ export default function formType(category, 구분, result) {
       주차가능여부,
       총주차대수,
       건물보안,
+      방,
     ];
   } else if (category == "단독") {
     return [

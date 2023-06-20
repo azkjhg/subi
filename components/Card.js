@@ -34,7 +34,7 @@ const Card = ({ result, list }) => {
       });
   };
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-1">
       {result.map((item, i) => {
 const formatAmount = (value) => {
   const parts = value.split('');

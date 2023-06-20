@@ -43,7 +43,7 @@ export default async function Home({value}) {
               <h2>대표/공인중개사 양수비</h2>
             </div>
             <p className="banner-info-text-small self">등록번호: 50110-2020-00015 제주시 천수로63(일도이동)</p>
-            <UseContext/>
+            
           </div>
 
           <div className="가게정보">
