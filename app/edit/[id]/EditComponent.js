@@ -188,7 +188,7 @@ const EditComponent = ({ result }) => {
       if (imageUpload == null) {
         alert("이미지를 업로드해주세요.");
         return;
-      }  vf6699999y759999999
+      }  
     if (imageUpload === result.urls[0] && imageUpload !== null) {
       console.log("기존 이미지입니다.");
 
