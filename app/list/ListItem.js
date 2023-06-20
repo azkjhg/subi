@@ -5,8 +5,33 @@ import { storage } from "/firebase";
 import { ref, deleteObject } from "firebase/storage";
 import Image from "next/image";
 import Card from "@/components/Card";
+import { useEffect, useState } from "react";
 
 export default function ListItem({ result }) {
+const [r, setR] = useState(null)
+  useEffect(() => {
+    fetch("/api/post/all", {
+      method: "POST",
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log("데이터 가져옴 .", response);
+          return response.json();
+        } else {
+          console.log(response);
+          throw new Error("데이터 못 가져옴");
+        }
+      })
+      .then((r) => {
+        console.log(r, "r");
+        setR(r)
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+
   const DataDelete = async (e, i) => {
     const confirmDelete = window.confirm("게시글을 삭제하시겠습니까?");
     if (confirmDelete) {
@@ -50,7 +75,7 @@ export default function ListItem({ result }) {
     }
   };
 
-  return <Card result={result} list="list" />;
+  return <>{r && <Card result={result} list="list" />}</>
 }
 
 //

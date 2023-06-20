@@ -150,7 +150,7 @@ const Page = () => {
 
   const handleLineChange = (e) => {
     setSelectedLine(e.target.value);
-  };
+  }; // 필요없는 듯
 
   const [inputPrice, setInputPrice] = useState(null);
   const handleInputChange = (e) => {
@@ -477,7 +477,7 @@ const Page = () => {
       )}
       <br/>
       <span>유튜브 링크 : </span>
-      <input name="유튜브링크" placeholder="유튜브링크" onChange={handleInputChange}/>
+      <input name="유튜브링크" placeholder="유튜브링크" />
       <br />
     </>
   );

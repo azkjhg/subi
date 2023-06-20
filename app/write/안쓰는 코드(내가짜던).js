@@ -19,17 +19,17 @@ const Page = () => {
   };
 
   //////////////// 이 부분은 이미지 url 띄우는 것일 뿐임.
-  const imageListRef = ref(storage, "image/");
+  // const imageListRef = ref(storage, "image/");
 
-  useEffect(() => {
-    listAll(imageListRef).then((r) => {
-      r.items.forEach((i) => {
-        getDownloadURL(i).then((url) => {
-          console.log(url);
-        });
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  //   listAll(imageListRef).then((r) => {
+  //     r.items.forEach((i) => {
+  //       getDownloadURL(i).then((url) => {
+  //         console.log(url);
+  //       });
+  //     });
+  //   });
+  // }, []);
 
   ////////////////////////////////
 
