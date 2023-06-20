@@ -148,51 +148,51 @@ else if(어떤거 == '토지'){
 console.log(cont.value[0])
   let 전체;
   if(cont.value[1] =="전체"){
-    전체 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    전체 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 focus:text-black focus:bg-white font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    전체 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    전체 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:text-black focus:bg-white font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
   let 아파트;
   if(cont.value[1] =="아파트"){
-    아파트 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    아파트 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    아파트 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    아파트 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
   let 상가건물;
   if(cont.value[1] =="상가건물"){
-    상가건물 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    상가건물 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    상가건물 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    상가건물 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
   let 상가주택;
   if(cont.value[1] =="상가주택"){
-    상가주택 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    상가주택 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    상가주택 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    상가주택 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
   let 상가점포;
   if(cont.value[1] =="상가점포"){
-    상가점포 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    상가점포 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    상가점포 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    상가점포 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
   let 빌라;
   if(cont.value[1] =="빌라"){
-    빌라 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    빌라 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    빌라 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    빌라 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
   let 단독;
   if(cont.value[1] =="단독"){
-    단독 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    단독 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    단독 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    단독 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
   let 토지;
   if(cont.value[1] =="토지"){
-    토지 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
+    토지 = "text-black bg-white border-2 border-gray-500 hover:bg-blue-800 hover:text-white focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 box-border"
   } else{
-    토지 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+    토지 = "text-white bg-blue-700 border-2 border-blue-300 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-bold focus:text-black focus:bg-white rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
   }
 
   return (
