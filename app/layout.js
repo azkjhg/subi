@@ -7,7 +7,7 @@ import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Link from "next/link";
 import { MyContextProvider } from '@/components/Context';
 import Image from "next/image";
-
+import { Analytics } from '@vercel/analytics/react';
 
 const sans = Open_Sans({ subsets: ["latin"] });
 const pretendard = Gowun_Batang({
@@ -49,6 +49,7 @@ export default async function RootLayout({ children }) {
           Copyright © 2023 양수비공인중개사사무소
           </p>
         </header> */}
+      <Analytics />
       </body>
     </html>
    
