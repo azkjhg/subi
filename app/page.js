@@ -73,7 +73,9 @@ export default async function Home({value}) {
       </div >
 
       </div>
+      
       <div className="">{result && <ProductList result={result} />}</div>
+
     </div>
   );
 }

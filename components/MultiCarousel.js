@@ -26,7 +26,7 @@ const MultiCarousel = ({urls}) => {
         }
       };
   return (
-    <Carousel infinite responsive={responsive}>
+    <Carousel  responsive={responsive}>
   {urls.map((item, i) => (
             <div key={i} className="parent-image">
           <Image className='child-image' key={i} src={item} width={2000} height={400} alt='매물 사진'/>

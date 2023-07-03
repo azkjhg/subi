@@ -151,8 +151,10 @@ const PostContent = ({ result }) => {
   const 내용 = (
     <>
       {result.유튜브링크 && (
-        
+        <div className="my-2">
+
           <YouTubeP 유튜브링크={result.유튜브링크} />
+        </div>
 
       )}
       <div className=" border-t border-gray-100">

@@ -426,8 +426,9 @@ const formatAmount = (value) => {
                     <Image
                       src={item.urls[0]}
                       alt={item.title}
-                      width={400}
-                      height={300}
+                      width={360}
+                      height={210}
+                      
                       className="h-full w-full object-cover object-center lg:h-full lg:w-full" //object-cover <=> object-fit
                     />
                   )}
