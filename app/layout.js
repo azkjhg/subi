@@ -27,6 +27,9 @@ export default async function RootLayout({ children }) {
   return (
     
     <html lang="ko" className={sans.className}>
+      <head>
+        <meta name="naver-site-verification" content="726ef2a1e6f54d0a00ea8d92409ec4d999c70448" />
+         </head>
       <body className="flex flex-col w-full max-w-screen-2xl mx-auto">
         <header className="flex justify-between items-center px-4 py-2 sticky top-0  z-[9999] bg-green-50">
           <Link href="/" >
