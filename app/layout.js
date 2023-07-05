@@ -16,7 +16,7 @@ const pretendard = Gowun_Batang({
 });
 
 export const metadata = {
-  title: "제주부동산 양수비공인중개사 사무소",
+  title: "제주부동산 양수비공인중개사",
   description: "제주도의 부동산을 소개합니다.",
   icons: { icon: "/favicon.ico" },
 };
