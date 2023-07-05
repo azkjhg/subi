@@ -17,7 +17,7 @@ export async function generateMetadata(props) {
 
 
   return {
-    title: `양수비 공인중개사 사무소 ${result && result.시} ${result && result.동} ${result && result.소재지} ${result && result} ${result && result.거래유형}`,
+    title: `제주부동산 양수비공인중개사 사무소 ${result && result.시} ${result && result.동} ${result && result.소재지} ${result && result} ${result && result.거래유형}`,
     description: `${result && result.title} ${result && result.content}`,
     icons: { icon: "/favicon.ico" },
   };
