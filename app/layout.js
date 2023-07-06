@@ -30,7 +30,13 @@ export default async function RootLayout({ children }) {
       <head>
         <meta name="naver-site-verification" content="726ef2a1e6f54d0a00ea8d92409ec4d999c70448" />
         <meta name="google-site-verification" content="Q3Ix5DGAml7dPAsDwMfziyZyuOwpPq-lBV634LiWabI" />
+        
         <meta name="robots" content="index,follow"/>
+        <meta property="og:type" content="website"/> 
+<meta property="og:title" content="제주부동산 양수비공인중개사" />
+<meta property="og:description" content="제주도의 부동산을 소개합니다." />
+<meta property="og:image" content="https://yangsubiland.com/로고.jpg" />
+<meta property="og:url" content="https://yangsubiland.com/" />
          </head>
       <body className="flex flex-col w-full max-w-screen-2xl mx-auto">
         <header className="flex justify-between items-center px-4 py-2 sticky top-0  z-[9999] bg-green-50">
