@@ -29,7 +29,7 @@ const BannerCarousel = () => {
     <Carousel responsive={responsive}>
       <div className='커버아이템'>
   <div className="banner-info2 xs:w-96 ">
-            <h1>양수비 공인중개사 사무소</h1>
+            <h1>제주부동산 양수비공인중개사</h1>
             <p className="bg-green-300 rounded-sm">
               제주도의 부동산을 소개합니다.
             </p>
