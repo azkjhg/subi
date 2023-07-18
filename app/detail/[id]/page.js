@@ -17,8 +17,8 @@ export async function generateMetadata(props) {
 
 
   return {
-    title: `제주부동산 양수비공인중개사 ${result && result.시} ${result && result.동} ${result && result.소재지} ${result && result} ${result && result.거래유형}`,
-    description: `${result && result.title} ${result && result.content}`,
+    title: `제주부동산 양수비공인중개사 ${result && result.시} ${result && result.동} ${result && result.소재지} ${result && result.매물종류} ${result && result.거래유형}`,
+    description: `${result && result.title} ${result && result.content} description: "제주도의 부동산을 소개합니다. 양수비공인중개사사무소 (제주시 일도이동 신천지1차 아파트 상가 맞은 편) 일도지구의 부동산을 책임지고 성실, 정확히 중개합니다. 기타 제주, 서귀포 전지역 매물 접수합니다. 문의: 010-8565-5310",`,
     icons: { icon: "/favicon.ico" },
   };
 }
@@ -63,7 +63,6 @@ const page = async (props) => {
       
     </div>
         </div>
-
         <section className="flex flex-col p-4">
         <div className="flex items-center self-end text-sky-600">
         <AiTwotoneCalendar />
